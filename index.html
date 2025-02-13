@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chance of School Canceling</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❄️ Chance of School Canceling ❄️</h1>
+    <p>Enter your zip code and select your school to check the chance of school cancellation!</p>
+    <input type="text" id="zipCode" placeholder="Enter your zip code" maxlength="5">
+    <select id="schoolSelect">
+      <option value="" disabled selected>Select your school</option>
+      <option value="Novi High School">Novi High School</option>
+      <option value="Novi Meadows">Novi Meadows</option>
+      <option value="Flex Tech High">Flex Tech High</option>
+      <option value="Novi Middle School">Novi Middle School</option>
+    </select>
+    <button id="checkButton">Check</button>
+    <div id="result" class="hidden">
+      <h2 id="prediction"></h2>
+      <p id="details"></p>
+    </div>
+    <div id="loader" class="hidden">
+      <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>Calculating...</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
