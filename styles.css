@@ -9,7 +9,6 @@ body {
   margin: 0;
   color: #333;
 }
-
 .container {
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
@@ -19,12 +18,10 @@ body {
   max-width: 400px;
   width: 100%;
 }
-
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 input, select {
   width: 100%;
   padding: 0.75rem;
@@ -33,7 +30,6 @@ input, select {
   border-radius: 5px;
   font-size: 1rem;
 }
-
 button {
   background: #007BFF;
   color: white;
@@ -44,44 +40,36 @@ button {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 button:hover {
   background: #0056b3;
 }
-
 #result {
   margin-top: 1.5rem;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
 #result.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 #prediction {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-
 #details {
   font-size: 1rem;
   color: #555;
 }
-
 #loader {
   display: none; /* Hide loader by default */
   margin-top: 1.5rem;
 }
-
 #loader p {
   margin-top: 1rem;
   font-size: 1rem;
   color: #555;
 }
-
 /* Spinner Animation */
 .spinner {
   position: relative;
@@ -89,7 +77,6 @@ button:hover {
   height: 60px;
   margin: 0 auto;
 }
-
 .spinner div {
   position: absolute;
   width: 50%;
@@ -98,73 +85,125 @@ button:hover {
   transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
   animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
 }
-
 .spinner div:nth-child(1) {
   --delay: 0.1;
   --rotation: 36;
   --translation: 150;
 }
-
 .spinner div:nth-child(2) {
   --delay: 0.2;
   --rotation: 72;
   --translation: 150;
 }
-
 .spinner div:nth-child(3) {
   --delay: 0.3;
   --rotation: 108;
   --translation: 150;
 }
-
 .spinner div:nth-child(4) {
   --delay: 0.4;
   --rotation: 144;
   --translation: 150;
 }
-
 .spinner div:nth-child(5) {
   --delay: 0.5;
   --rotation: 180;
   --translation: 150;
 }
-
 .spinner div:nth-child(6) {
   --delay: 0.6;
   --rotation: 216;
   --translation: 150;
 }
-
 .spinner div:nth-child(7) {
   --delay: 0.7;
   --rotation: 252;
   --translation: 150;
 }
-
 .spinner div:nth-child(8) {
   --delay: 0.8;
   --rotation: 288;
   --translation: 150;
 }
-
 .spinner div:nth-child(9) {
   --delay: 0.9;
   --rotation: 324;
   --translation: 150;
 }
-
 .spinner div:nth-child(10) {
   --delay: 1;
   --rotation: 360;
   --translation: 150;
 }
-
 @keyframes spinner-fzua35 {
   0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
   }
-
   50% {
     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
   }
+}
+
+/* === Upgrade Banner Styles (added at the end) === */
+.upgrade-banner {
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  color: white;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #004080;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.banner-content span {
+  font-size: 1.1rem;
+}
+
+.toggle-btn {
+  background: rgba(255,255,255,0.25);
+  border: 1px solid white;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.toggle-btn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.upgrade-details {
+  background: rgba(255,255,255,0.15);
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.upgrade-details ul {
+  padding-left: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.upgrade-details.hidden {
+  display: none;
 }
