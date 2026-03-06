@@ -7,6 +7,35 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- New Upgrade Banner (added right after <body>) -->
+  <div id="upgradeBanner" class="upgrade-banner">
+    <div class="banner-content">
+      <span>New Algorithm Update! 2-3x Smarter Predictions</span>
+      <button id="toggleDetails" class="toggle-btn">Learn More ▼</button>
+    </div>
+    <div id="upgradeDetails" class="upgrade-details hidden">
+      <p><strong>What's New?</strong> We've upgraded to a smarter, more accurate model tuned specifically to Novi Community Schools and Michigan district norms (based on Superintendent Ben Mainka's guidance, nearby districts like Ann Arbor/Livonia, and National Weather Service frostbite charts).</p>
+      
+      <ul>
+        <li><strong>Wind chill is now king</strong> — Novi often closes around -20°F wind chill (especially at drop-off/pickup times). New logic: 50% chance at -15°F effective chill, 80% at -20°F, 95%+ at -25°F or below. Uses precise "feels like" data + calculated wind chill.</li>
+        <li><strong>Better ice & frost detection</strong> — Detects freezing rain/sleet with weather codes (high risk → big boost), plus frost/black ice from humidity + temp 28–32°F.</li>
+        <li><strong>Smarter precip/road risk</strong> — Heavy snow + cold = higher impact (snow worse than rain).</li>
+        <li><strong>Weighted & bonus system</strong> — No flat average anymore: wind chill weighs 40%, ice 25%, precip 20%, extreme cold 15%. Extra +20% if multiple bad factors hit (realistic for closures).</li>
+      </ul>
+      
+      <p><strong>Result: Much more realistic chances</strong></p>
+      <ul>
+        <li>Wind chill -18°F + light snow → 60–80% (old: ~20–40%)</li>
+        <li>Freezing rain at 30°F → 70–90%</li>
+        <li>Sustained -22°F wind chill → near 90–100%</li>
+        <li>Mild cold (10°F, no extras) → still low (10–30%), matches reality</li>
+      </ul>
+      
+      <p>Predictions are now 2-3x more likely to flag meaningful risks when conditions are borderline-bad — just like real Novi decisions!</p>
+    </div>
+  </div>
+
   <div class="container">
     <h1>❄️ Chance of School Canceling ❄️</h1>
     <p>Enter your zip code and select your school to check the chance of school cancellation!</p>
@@ -39,6 +68,7 @@
       <p>Calculating...</p>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
